@@ -1,9 +1,10 @@
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'index'
+    title = 'Trading Bot!'
+    return render_template('index.html', title = title)
 
 @app.route('/buy')
 def buy():
