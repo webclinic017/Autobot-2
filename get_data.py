@@ -23,12 +23,15 @@ client = Client(config.API_KEY, config.API_SECRET)
 # print(df.shape)
 # print(len(candles))
 
-klines = client.get_historical_klines("BTCUSDT", Client.KLINE_INTERVAL_5MINUTE, "1 Jan, 2017", "6 Dec, 2020")
+# candels = client.get_historical_klines("BTCUSDT", Client.KLINE_INTERVAL_5MINUTE, "1 Jan, 2017", "12 Dec, 2020") # , "1 Jan, 2017", "6 Dec, 2020"
 
-df_for_csv = []
-for kline in klines:
-    df_for_csv.append(kline)
 
-df = pd.DataFrame(df_for_csv)
-print(df.head())
-print(df.shape)
+# csvfile = open('5_min.csv', 'w', newline='')
+# candel_writer = csv.writer(csvfile, delimiter=',')
+
+# for candel in candels:
+#     #print(candel)
+#     candel_writer.writerow(candel)
+
+# print(len(candels))
+# csvfile.close()

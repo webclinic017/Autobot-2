@@ -5,6 +5,7 @@ __pycache__/
 
 config.py
 src.py
+TA_Lib-0.4.19-cp39-cp39-win_amd64.whl
 
 # C extensions
 *.so
