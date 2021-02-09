@@ -2,6 +2,8 @@
     <head>
         <title>Autobot</title>
         <script src = "https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+        <link rel="icon" href="https://faviconka.ru/ico/1/faviconka.ru_1_102250.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="https://faviconka.ru/ico/1/faviconka.ru_1_102250.ico" type="image/x-icon" />
     </head>
     <body>
         
@@ -10,6 +12,24 @@
         <div id = "chart"></div>
 
         <div id = "trades"></div>
+        <div id = 'my_balance'>
+            <h2>Balances</h2>
+        <table>
+            <th>Ticker</th>
+            <th>Balance</th>
+            <th>In order</th>
+            {% for b in my_balance %}
+            <tr>
+
+            </tr>
+            <tr>
+                     <td> {{b[0]}} </td>
+                     <td> {{b[1]}} </td>
+                     <td> {{b[2]}} </td>
+            </tr>
+            {% endfor %}
+        </table>
+        </div>
 
         <h3> Settings</h3>
         <div id=:settings>
@@ -35,6 +55,6 @@
             }*/
 
         </script>
-        <script src="{{ url_for('static', filename='chart.js') }}"></script>
+        <script src="{{ url_for('static', filename='chart1.js') }}"></script>
     </body>
 </html>
